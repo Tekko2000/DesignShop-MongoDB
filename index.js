@@ -7,7 +7,7 @@ const DbUri = `mongodb+srv://${process.env.LOGIN}:${process.env.PASSWORD}@fullst
 const app = express()
 mongoose.connect(DbUri, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
     console.log('Database connected')
-    app.listen(5000, () => {
+    app.listen(PORT, () => {
         console.log(`Listening at http://localhost:${PORT}`);
     })
 })
@@ -17,7 +17,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    console.log(process.env.LOGIN)
     DesignItem.find()
         .then(result => {
             console.log(result)
