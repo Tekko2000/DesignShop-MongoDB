@@ -8,7 +8,7 @@ const app = express()
 mongoose.connect(DbUri, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
     console.log('Database connected')
     app.listen(5000, () => {
-        console.log(`Listening at http://localhost:${PORT});
+        console.log(`Listening at http://localhost:${PORT}`);
     })
 })
 app.use(express.static('public'))
