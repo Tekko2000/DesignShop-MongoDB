@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Karla'
+}
+
+nav{
+    padding:3% 12%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+nav a{
+    text-decoration:none;
+    color: rgba(50,58,69,1);
+    font-size: 20px;
+}
+
+.grid{
+    padding:5% 10%;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    gap:20px;
+}
+.grid img{
+    width: 100%;
+    border-radius:10px;
+}
+.brand{
+    display:flex;
+    justify-content:space-between;
+}
+.shoplink a{
+    text-decoration:none;
+}
+.shoplink a button{
+    outline: none;
+    border: 2px solid rgba(50,58,69,1);
+    background: transparent;
+    border-radius:5px;
+    padding:3px 10px;
+}
+.bottom{
+    text-align:center;
+    padding:5% 0;
+}
+
+.itemOverview{
+    display:flex;
+    justify-content:center;
+}
+.itemOverview div{
+    padding-left:10%;
+}
+.itemOverview img{
+    width:500px;
+    height: 600px;
+    border-radius:10px;
+}
+.itemOverview div .edit{
+    padding: 50px 0;
+    display:flex;
+    justify-content:space-between;
+}
+.itemOverview > div > div:nth-child(5){
+    padding:2% 0;
+}
+.itemOverview > div > div.edit > a > button{
+    outline: none;
+    border: 2px solid rgba(50,58,69,1);
+    background: transparent;
+    border-radius:5px;
+    padding:3px 10px;
+}
+.itemOverview > div > div:nth-child(5) > a > button{
+    outline: none;
+    border: 2px solid rgba(50,58,69,1);
+    background: transparent;
+    border-radius:5px;
+    padding:3px 10px;
+}
+.form{
+    text-align: center;
+    padding-bottom: 5%;
+}
+.form h1{
+    font-size:40px;
+    font-weight: 800;
+}
+.form div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form div input{
+    width:80%;
+    padding:15px 0 15px 10px;
+    border-radius:10px;
+    border: 1px solid rgba(50,58,69,1);
+    outline: none;
+    font-size: 20px;
+}
+.form label{
+    font-weight: 700;
+    font-size:20px;
+}
+.form input[type="submit"]{
+    outline: none;
+    border: 1px solid rgba(50,58,69,1);
+    background:transparent;
+    border-radius:5px;
+    padding:20px;
+    font-weight: 800;
+}
