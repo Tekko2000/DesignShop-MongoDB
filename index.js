@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const DesignItem = require('./models/designItem')
 require('dotenv').config();
-const DbUri = "mongodb+srv://supercode:supercode@fullstack.jvlme.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const DbUri = `mongodb+srv://${process.env.LOGIN}:${process.env.PASSWORD}@fullstack.jvlme.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 const app = express()
 mongoose.connect(DbUri, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
     console.log('Database connected')
@@ -16,11 +16,13 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.get('/', (req, res) => {
+    console.log(process.env.LOGIN)
     DesignItem.find()
         .then(result => {
             console.log(result)
             res.render('pages/index', { result })
         }).catch(err => console.log(err))
+
 })
 app.get('/add', (req, res) => {
     res.render('pages/newItem')
