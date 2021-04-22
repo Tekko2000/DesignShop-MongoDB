@@ -2,12 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const DesignItem = require('./models/designItem')
 require('dotenv').config();
+const PORT = process.env.PORT || 5000;
 const DbUri = `mongodb+srv://${process.env.LOGIN}:${process.env.PASSWORD}@fullstack.jvlme.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 const app = express()
 mongoose.connect(DbUri, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
     console.log('Database connected')
     app.listen(5000, () => {
-        console.log('Listening at http://localhost:5000');
+        console.log(`Listening at http://localhost:${PORT});
     })
 })
 app.use(express.static('public'))
