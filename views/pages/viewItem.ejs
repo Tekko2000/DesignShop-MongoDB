@@ -14,38 +14,40 @@
 </head>
 
 <body>
-    <nav>
-        <a href="/">
-            <h1>THE DESIGN SHOP</h1>
+    <nav class='shop-nav'>
+        <a class='shop-logo' href="/">
+            THE DESIGN SHOP
         </a>
-        <a href="/add">ADD</a>
     </nav>
+
     <section class="itemOverview">
-        <img src=<%=`${result.product_pic_link}` %> alt="">
+
+        <img src=<%=`${result.product_pic_link}` %> alt="item large image">
         <div>
-            <h1>
+            <h2 class="brand-name">
                 <%= `${result.product}` %>
-            </h1>
-            <p>
+            </h2>
+            <p class='brand-title'>
                 <%= `${result.company}` %>
             </p>
-            <p>
+            <p class='item-price'>
                 Total: <%= `${result.price}` %>
             </p>
+
+            
             <div class="edit">
-                <a href=<%=`/updateItem/${result._id}`%>>
-                    <button>Edit</button>
+                <a class="link-btn" href=<%=`/updateItem/${result._id}`%>>
+                    Edit
                 </a>
-                <a href=<%=`/delete/${result._id}`%>>
-                    <button>Delete</button>
+                <a class="link-btn" href=<%=`/delete/${result._id}`%>>
+                    Delete
                 </a>
-            </div>
-            <div>
-                <a href=<%=`${result.link_shop}` %>>
-                    <button>Go to Shop</button>
+                <a class="link-btn" target="_blank" href=<%=`${result.link_shop}` %>>
+                    Go to Shop
                 </a>
             </div>
-        </div>
+
+            </div>
 
     </section>
 

@@ -14,15 +14,14 @@
 </head>
 
 <body>
-    <nav>
-        <a href="/">
-            <h1>THE DESIGN SHOP</h1>
+    <nav class='shop-nav'>
+        <a class='shop-logo' href="/">
+            THE DESIGN SHOP
         </a>
-        <a href="/add">ADD</a>
     </nav>
 
     <form action="/update" method="post" class="form">
-        <h1>EDIT PRODUCT</h1>
+        <h2>EDIT PRODUCT</h2>
         <input type="hidden" name="id" value=<%=result._id %>>
         <div>
             <label for="">Product</label>
@@ -56,7 +55,7 @@
         </div>
         <div>
             <br>
-            <input type="submit" value="Update Product">
+            <input class='update-item' type="submit" value="Update Product">
         </div>
     </form>
 </body>

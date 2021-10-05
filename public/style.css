@@ -3,54 +3,66 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Karla'
+    font-family:'Karla', sans-serif;
+    font-weight: bold;
 }
 
-nav{
+a {
+    text-decoration:none;
+    color:rgba(50,58,69,1);
+    cursor: pointer;
+}
+
+.shop-nav{
     padding:3% 12%;
     display:flex;
     justify-content:space-between;
     align-items: center;
 }
-nav a{
-    text-decoration:none;
-    color: rgba(50,58,69,1);
-    font-size: 20px;
+
+.shop-logo{
+    font-size:2.75rem;
+}
+.shop-add{
+    font-size:1.25rem;
 }
 
+.shop-nav a:hover,
+.shop-nav a:focus{
+    color: rgba(50,58,69,.7);
+}
+
+.link-btn{
+    display:inline-block;
+    border:2px solid rgba(50,58,69,1);
+    padding:10px 25px;
+    border-radius:6px;
+}
+
+.link-btn:hover,
+.link-btn:focus{
+    background-color:#000;
+    color:#fff;
+}
 .grid{
-    padding:5% 10%;
     display:grid;
     grid-template-columns: repeat(4,1fr);
     justify-items: center;
-    gap:20px;
+    align-items: center;
+    padding:5% 10%;
 }
-.grid img{
-    width: 100%;
-    border-radius:10px;
+.item-img{
+    width:100%;
+    border-radius: 10px;
 }
 .brand{
     display:flex;
     justify-content:space-between;
 }
-.shoplink a{
-    text-decoration:none;
-}
-.shoplink a button{
-    outline: none;
-    border: 2px solid rgba(50,58,69,1);
-    background: transparent;
-    border-radius:5px;
-    padding:3px 10px;
-}
-.bottom{
-    text-align:center;
-    padding:5% 0;
-}
-
 .itemOverview{
     display:flex;
     justify-content:center;
+    margin-top:4%;
 }
 .itemOverview div{
     padding-left:10%;
@@ -60,34 +72,21 @@ nav a{
     height: 600px;
     border-radius:10px;
 }
-.itemOverview div .edit{
+.itemOverview .edit{
+    height:175px;
+    width:300px;
     padding: 50px 0;
     display:flex;
+    flex-direction: column;
     justify-content:space-between;
-}
-.itemOverview > div > div:nth-child(5){
-    padding:2% 0;
-}
-.itemOverview > div > div.edit > a > button{
-    outline: none;
-    border: 2px solid rgba(50,58,69,1);
-    background: transparent;
-    border-radius:5px;
-    padding:3px 10px;
-}
-.itemOverview > div > div:nth-child(5) > a > button{
-    outline: none;
-    border: 2px solid rgba(50,58,69,1);
-    background: transparent;
-    border-radius:5px;
-    padding:3px 10px;
+    text-align: center;
 }
 .form{
     text-align: center;
     padding-bottom: 5%;
 }
-.form h1{
-    font-size:40px;
+.form h2{
+    font-size:2.5rem;
     font-weight: 800;
 }
 .form div{
@@ -105,13 +104,22 @@ nav a{
 }
 .form label{
     font-weight: 700;
-    font-size:20px;
+    font-size:1.25rem;
 }
-.form input[type="submit"]{
+.add-item,
+.update-item {
     outline: none;
     border: 1px solid rgba(50,58,69,1);
     background:transparent;
     border-radius:5px;
     padding:20px;
-    font-weight: 800;
+    cursor: pointer;
+}
+.add-item:hover,
+.add-item:focus,
+.update-item:hover,
+.update-item:focus {
+    background-color: #000;
+    color: #fff;
+    
 }

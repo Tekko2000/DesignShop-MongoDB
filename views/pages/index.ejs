@@ -12,39 +12,45 @@
         href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
 </head>
-<nav>
-    <a href="/">
-        <h1>THE DESIGN SHOP</h1>
+
+<nav class='shop-nav'>
+    <a class='shop-logo' href="/">
+        THE DESIGN SHOP
     </a>
-    <a href="/add">ADD</a>
+    <a class='shop-add' href="/add">ADD NEW PRODUCT</a>
 </nav>
+
 <section class="grid">
+
     <%result.forEach(element=> { %>
         <figure>
-            <img src=<%=`${element.product_pic_link}` %> alt="">
+            <img class='item-img' src=<%=`${element.product_pic_link}` %> alt="">
             <figcaption>
+
                 <div class="brand">
-                    <p>
+                    <p class='brand-name'>
                         <%= `${element.product}` %>
                     </p>
-                    <p>
+                    <p class='item-price'>
                         <%= `${element.price}` %>
                     </p>
                 </div>
-                <div class="shoplink">
-                    <p>
+
+                <div class="shopLink">
+                    <p class='brand-title'>
                         <%= `${element.company}` %>
                     </p>
-                    <a href=<%=`/item/${element._id}`%>>
-                        <button>Details</button>
+                    <a class="link-btn" href=<%=`/item/${element._id}`%> >
+                        Details
                     </a>
                 </div>
+
             </figcaption>
         </figure>
 
         <% }) %>
 </section>
-<h1 class="bottom">THE DESIGN SHOP</h1>
+
 
 
 <body>
